@@ -1,0 +1,24 @@
+<?php
+$DIR = "../";
+/* Sessions controles */
+require($DIR.'actions/sessions-controle.php');
+/* check confirmation session */
+
+if(!isset($_SESSION['CONFIRMED'])) {header("Location: ../index.php"); die();}
+$code = !empty($_SESSION['CODE']) ? $_SESSION['CODE'] : '';
+$cat = !empty($_SESSION['CAT']) ? $_SESSION['CAT'] : '';
+$TypeForm = !empty($_SESSION['TYPEFORM']) ? $_SESSION['TYPEFORM'] : '';
+
+/* Styles switch [ALÉATOIRE] */
+require($DIR.'actions/styles-switch.php');
+/* configuration des pages */
+include($DIR.'parametre/settings.php');
+/* css des pages */
+include($DIR.'parametre/css.php');
+/* entête de la page */
+include($DIR.'include/header-confirmation.php');
+/* contenu du page de confimation */
+include($DIR.'include/confirmation-content.php');
+/* bas de page */
+include($DIR.'include/footer-confirmation.php');
+?>

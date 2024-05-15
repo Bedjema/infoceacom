@@ -1,0 +1,26 @@
+<?php
+$code = 17;
+$DIR = "./";
+$cat = 1;
+if (empty($_GET['test']) and !isset($_GET['test'])) {
+	header('Location: ./index.php');
+}
+/* Sessions controles */
+require($DIR.'actions/sessions-controle.php');
+/* configuration des pages */
+include($DIR.'parametre/settings.php');
+/* Styles switch [ALÉATOIRE] */
+require($DIR.'actions/styles-switch.php');
+/* css des pages */
+include($DIR.'parametre/css.php');
+/* Entête de la page */
+include($DIR.'include/header.php');
+/* Contenu du texte de la page */
+include($DIR.'include/container-top-auto.php');
+/* Formulaire demande de devis */
+include($DIR.'include/form-demande-content-Imm.php');
+/* Contenu du texte de la page */
+//include($DIR.'include/container-bottom.php');
+/* bas de page */
+include($DIR.'include/footer.php');
+?>
