@@ -3,24 +3,24 @@ $code = 17;
 $DIR = "./";
 $cat = 1;
 if (empty($_GET['test']) and !isset($_GET['test'])) {
-	header('Location: ./index.php');
+	header('Location: ./index.html');
 }
 /* Sessions controles */
-require($DIR.'actions/sessions-controle.php');
+require($DIR.'actions/sessions-controle.html');
 /* configuration des pages */
-include($DIR.'parametre/settings.php');
+include($DIR.'parametre/settings.html');
 /* Styles switch [ALÉATOIRE] */
-require($DIR.'actions/styles-switch.php');
+require($DIR.'actions/styles-switch.html');
 /* css des pages */
-include($DIR.'parametre/css.php');
+include($DIR.'parametre/css.html');
 /* Entête de la page */
-include($DIR.'include/header.php');
+include($DIR.'include/header.html');
 /* Contenu du texte de la page */
-include($DIR.'include/container-top-auto.php');
+include($DIR.'include/container-top-auto.html');
 /* Formulaire demande de devis */
-include($DIR.'include/form-demande-content-Imm.php');
+include($DIR.'include/form-demande-content-Imm.html');
 /* Contenu du texte de la page */
-//include($DIR.'include/container-bottom.php');
+//include($DIR.'include/container-bottom.html');
 /* bas de page */
-include($DIR.'include/footer.php');
+include($DIR.'include/footer.html');
 ?>
